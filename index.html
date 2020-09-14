@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ball</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Verdana, sans-serif;
+    }
+
+    header {
+      display: flex;
+      padding: 0 16px;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 64px;
+    }
+
+    .sp-menu {
+      margin-left: auto;
+    }
+
+    .sp-menu #open {
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+    }
+
+    .sp-menu #open.hide {
+      display: none;
+    }
+
+    main {
+      padding: 0 16px;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: rgba(255, 255, 255, 0.95);
+      text-align: center;
+      padding: 64px;
+      opacity: 0;
+      pointer-events: none;
+      opacity: 0;
+      transition-duration: 0.8s;
+    }
+
+    .overlay.show {
+      opacity: 1;
+      pointer-events: auto;
+      background: rgba(0, 0, 0, 0.9);
+    }
+
+    .overlay #close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 50px;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    .overlay ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .overlay li {
+      margin-top: 24px;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .3s, transform .6s;
+    }
+
+    .overlay.show li {
+      opacity: 1;
+      transform: none;
+    }
+
+    .overlay.show li:nth-child(1) {
+      transition-delay: .1s;
+    }
+
+    .overlay.show li:nth-child(2) {
+      transition-delay: .2s;
+    }
+
+    .overlay.show li:nth-child(3) {
+      transition-delay: .3s;
+    }
+
+    .overlay a {
+      color: #fff;
+
+    }
+
+    .pc-menu {
+      display: none;
+    }
+
+    /*
+    @media (min-width: 600px) {
+      .pc-menu {
+        display: block;
+        margin-left: auto;
+      }
+
+      .pc-menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      .pc-menu a {
+        display: block;
+        width: 80px;
+        line-height: 64px;
+        text-align: center;
+      }
+
+      .pc-menu a:hover {
+        background: #f2f2f2;
+      }
+
+      .sp-menu {
+        display: none;
+      }
+    }*/
+
+    .color {
+      margin: 0;
+      padding: 0;
+    }
+
+    .color+.color {
+      margin-left: 5px;
+    }
+
+    .color01 {
+      color: #7fbfff;
+    }
+
+    .color02 {
+      color: #ff9999;
+    }
+
+    .color03 {
+      color: #ffa64d;
+    }
+
+    .color04 {
+      color: #ffea80;
+    }
+
+    .color05 {
+      color: #c4ff4d;
+    }
+
+    .color06 {
+      color: #b366ff;
+    }
+
+    p {
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h1>
+        <span class="color color01">K</span><span class="color color02">O</span><span
+          class="color color03">T</span><span class="color color04">O</span><span class="color color05">R</span><span
+          class="color color06">I</span>
+      </h1>
+    </div>
+
+    <div class="pc-menu">
+      <nav>
+        <ul>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Menu</a></li>
+        </ul>
+      </nav>
+    </div>
+
+
+    <div class="sp-menu">
+      <img class="cat-open" id="open" src="img/nikukyu.png">
+    </div>
+
+    <div class="overlay">
+      <span class="material-icons" id="close">close</span>
+      <nav>
+        <ul>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Menu</a></li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+  <main>
+    <p>Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. </p>
+
+    <p>meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. meow. </p>
+
+    <p>miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. miaou. </p>
+
+    <p>miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. miau. </p>
+
+  </main>
+
+  <div class="ball-wap">
+    <div class="ball"></div>
+    <div class="ball-shadow"></div>
+  </div>
+
+  <script>
+    'use strict';
+
+    {
+      const open = document.getElementById('open');
+      const overlay = document.querySelector('.overlay');
+      const close = document.getElementById('close');
+
+      open.addEventListener('click', () => {
+        overlay.classList.add('show');
+        open.classList.add('hide');
+      });
+
+      close.addEventListener('click', () => {
+        overlay.classList.remove('show');
+        open.classList.remove('hide');
+      });
+    }
+  </script>
+</body>
+
+</html>
